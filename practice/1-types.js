@@ -9,7 +9,13 @@ function getRandomInt(max) {
 // Write the recipe (algorithm) in the comments. Write the code.
 
 // Store the value of the first die in memory. Write it out to the console in a human-readable format.
+let die1 = getRandomInt(6)
+console.log(`Die1: ${die1}`)
 
 // Store the value of the second die in memory. Write it out to the console in a human-readable format.
+let die2 = getRandomInt(6)
+console.log(`Die2: ${die2}`)
 
 // Store the value of the total of the two dice in memory. Write it out to the console in a human-readable format.
+let sum = die1+die2
+console.log(` Sum: ${sum}`)

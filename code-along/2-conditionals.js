@@ -18,3 +18,19 @@ function getRandomInt(max) {
 let input = prompt(`Enter a number between 1 and 10`)
 
 // Write the recipe (algorithm) in the comments. Then, write the code.
+
+let input = prompt(`Eneter a number between 1 and 10`)
+console.log(`you enetered ${input}`)
+// Write the recipe (algorithm) in the comments. Write the code.
+let randomNumber = getRandomInt(10)
+console.log(`The random number is ${randomNumber}`)
+
+//If the user did not enter a number between 1 and 10, display error message.
+if (input < 1 || input > 10) {
+  console.log(`Did you read the directions?!`)
+} else if  (input == randomNumber) {
+//Gusssed number you win!
+  console.log(`You Win!`)
+} else {
+  console.log(`Sorry!`)
+}

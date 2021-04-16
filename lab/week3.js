@@ -31,8 +31,11 @@ document.addEventListener('DOMContentLoaded', async function() {
 
   // PART 1
   // Figure out how products there are, and store that number in memory
-
+  productCount = data.products.length
+  console.log(`Products: ${productCount}`)
   // Figure out how promotions there are, and store that number in memory
+  promotiontCount = data.promotions.length
+  console.log(`Promotions: ${promotiontCount}`)
 
   // Write the number of products to the JavaScript console
 
@@ -40,12 +43,16 @@ document.addEventListener('DOMContentLoaded', async function() {
 
   // PART 2
   // Store the first product in memory
-
+let Product1 = data.products[0]
+console.log(Product1.name)
   // Write the first product to the JavaScript console, on three separate lines
-
+let products = data.products
   // Repeat for the 2nd and 3rd products
   // Store the second product in memory
+products.forEach(element => {
+  console.log(`${element.name}: ${element.description} - ${element.price}`)
 
+});
   // Write the product to the JavaScript console, on three separate lines
   
   // Store the third product in memory
@@ -54,19 +61,29 @@ document.addEventListener('DOMContentLoaded', async function() {
 
   // PART 3
   // Get a random integer between 1 and 10
-
+  let promotions = data.promotions
+  let randomPromo = getRandomInt(promotions.length)-1
   // Subtract one from that random integer because Arrays are zero-based
-
   // Use the random integer to grab a promotion from the Array of promotions
   // and store it in memory
-  
   // Figure out which emoji should be displayed, store it in memory (you will need
   // an empty variable for this before you write any conditional)
-
+let type = promotions[randomPromo].type
   // Create a sentence that displays the emoji along with the description 
   // of the promotion
-
+let emoji
+//   - Discount = 🤑
+//   - Shipping = 🚛
+//   - Contest = 🏆
+if (type ==`discount`) {
+  emoji = `🤑`
+} else if (type == `shipping`) {
+  emoji = `🚛`
+} else {
+  emoji = `🏆` 
+}
   // Write the sentence to the JavaScript console
+  console.log(`${emoji} ${promotions[randomPromo].description} - ${promotions[randomPromo].type}`)
 
   // 🔥 YOUR CODE ENDS HERE 🔥
 })
